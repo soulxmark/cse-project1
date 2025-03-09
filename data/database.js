@@ -1,11 +1,11 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
-const MongoClient = require('mongodb').MongoClien;
+const MongoClient = require('mongodb').MongoClient;
 
 let database;
 
-const intDB = (callback) => {
+const initDb = (callback) => {
     if(database){
         console.log('Db  is already initialized1');
         return callback(null,database);
@@ -22,7 +22,7 @@ const intDB = (callback) => {
 
 const getDatabase = () => {
     if (!database) {
-        throw Error("Database not initialized");
+        throw Error('Database not initialized');
     }
     return database;
 };
