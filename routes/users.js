@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const userController = require('../controllers/users');
 
-const usersController = require('../controllers/users');
+router.get('/', userController.getAll);
+router.get('/:id', userController.getSingle);
 
-router.get('/', usersController.getAll);
-
-router.get('/:id', usersController.getSingle);
-
-module.export = router;
+module.exports = router; // ✅ Ensure you're exporting only the router!
