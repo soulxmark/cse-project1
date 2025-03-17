@@ -1,8 +1,28 @@
 {
+  "namme": "cse-341-project",
+  "version": "1.0.0",
+  "description": "Project 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo\"Error: no test specific\"&& exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soulxmark/cse-project1"
+  },
+  "author": "Mark Estimada",
+  "liecense": "ISC",
+  "bugs": {
+    "url": "https://github.com/soulxmark/cse-project1"
+  },
+  "homepage": "https://github.com/soulxmark/cse-project1#readme",
   "dependencies": {
     "body-parse": "^0.1.0",
+    "body-parser": "^1.20.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongodb": "^6.14.2"
+    "mongodb": "^6.14.2",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
   }
 }

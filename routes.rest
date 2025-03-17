@@ -8,11 +8,10 @@ GET https://localhost:3000/users/67cc6731fdeb6f708e656e38
 POST https://localhost:3000/users HTTP/1.1
 content-Type: application/json
 
-{
-    "_id": "67cc6731fdeb6f708e656e38",
-    "email": "test@test.com",
+{ "_id": "67cc6731fdeb6f708e656e38",
+    "email": "test@example.com",
     "username": "test@test.com",
-    "name": "Hello",
+    "name": "Hello1",
     "ipaddress": "94.121.163.63"
   }
 
@@ -21,9 +20,10 @@ PUT https://localhost:3000/users/67cc6731fdeb6f708e656e38  HTTP/1.1
 content-type: application/json
 
 {
-    "fistName":"Sarah",
-    "lastName":"Birch",
-    "email":"SaraB@test.com",
-    "favoriteColor":"Green",
-    "birthday":"12/12/20"
+    "email": "test@example.com",
+    "username": "test@test.com",
+    "name": "Hello1",
+    "ipaddress": "94.121.163.63"
 }
+
+DELETE  https://localhost:3000/users/67cc6731fdeb6f708e656e38 HTTP/1.1
