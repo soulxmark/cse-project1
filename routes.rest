@@ -1,11 +1,11 @@
 
-GET https://localhost:3000/users
+GET https://localhost:3001/users
 
 
-GET https://localhost:3000/users/67cc6731fdeb6f708e656e38
+GET https://localhost:3001/users/67cc6731fdeb6f708e656e38
 
 
-POST https://localhost:3000/users HTTP/1.1
+POST https://localhost:3001/users HTTP/1.1
 content-Type: application/json
 
 { "_id": "67cc6731fdeb6f708e656e38",
@@ -16,7 +16,7 @@ content-Type: application/json
   }
 
 
-PUT https://localhost:3000/users/67cc6731fdeb6f708e656e38  HTTP/1.1
+PUT https://localhost:3001/users/67cc6731fdeb6f708e656e38  HTTP/1.1
 content-type: application/json
 
 {
@@ -26,4 +26,4 @@ content-type: application/json
     "ipaddress": "94.121.163.63"
 }
 
-DELETE  https://localhost:3000/users/67cc6731fdeb6f708e656e38 HTTP/1.1
+DELETE  https://localhost:3001/users/67cc6731fdeb6f708e656e38 HTTP/1.1

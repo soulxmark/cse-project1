@@ -56,7 +56,7 @@ const updateUser = async (req,res) =>{
         }
 };
 
-
+//===================== Delete Data ==============================================
 const deleteUser = async (req,res) =>{
     const userId = new ObjectId(req.params.id);
     const reponse = await mongodb.getDatabase().db().collection('users').deleteOne({_id: userId});
