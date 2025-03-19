@@ -6,10 +6,10 @@ router.get('/', usersController.getAll);
 router.get('/:id', usersController.getSingle);
 
 //----------- CRUD Section------------------
-router.get('/', usersController.createUser);
+router.post('/', usersController.createUser);
 
-router.get('/:id', usersController.updateUser);
+router.put('/:id', usersController.updateUser);
 
-router.get('/:id', usersController.deleteUser);
+router.delete('/:id', usersController.deleteUser);
 
 module.exports = router; // ✅ Ensure you're exporting only the router!
