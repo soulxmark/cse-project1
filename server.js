@@ -9,19 +9,22 @@ const port = process.env.PORT || 3001;
 
 // Middleware
 app.use(bodyParser.json());
+// Register Routes
 
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader(
+        'Access-Control-Allow-Headers', 
+        'Origin,Content-Type,Accept,Z-Key'
+    );
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
 });
-
+app.use('/', require('./routes'));
 // **Add Swagger Route**
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-// Register Routes
-app.use("/", require("./routes"));
+
 
 // Start database connection first
 database.initDb((err) => {
